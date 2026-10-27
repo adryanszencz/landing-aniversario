@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Talks 01/10 | Evento de aniversário</title>
+    <meta name="description" content="Tech Talks: um dia de palestras sobre front-end, back-end, dados e UI/UX em 01 de outubro.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__content">
+            <img class="header__logo" src="images/ebac_logo.svg" alt="EBAC">
+            <nav class="header__nav">
+                <a href="#palestras">Palestras</a>
+                <a href="#programacao">Programação</a>
+                <a href="#inscricao" class="header__cta">Inscreva-se</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero__content">
+            <p class="hero__tag">Edição especial de aniversário</p>
+            <h1 class="hero__title">Tech <span>Talks</span></h1>
+            <p class="hero__date">01 de outubro · 9h às 18h · online e gratuito</p>
+            <p class="hero__text">
+                Para comemorar o meu aniversário, um dia inteiro de conversas sobre tecnologia: front-end, back-end, dados e UI/UX, com quem trabalha com isso todos os dias.
+            </p>
+
+            <div class="contador" id="contador" aria-live="polite">
+                <div class="contador__item"><span id="dias">0</span>dias</div>
+                <div class="contador__item"><span id="horas">0</span>horas</div>
+                <div class="contador__item"><span id="minutos">0</span>min</div>
+                <div class="contador__item"><span id="segundos">0</span>seg</div>
+            </div>
+
+            <a href="#inscricao" class="button">Quero participar</a>
+        </div>
+    </section>
+
+    <main>
+        <section id="palestras" class="palestras">
+            <div class="container">
+                <h2 class="title">Palestras</h2>
+                <ul class="palestras__lista">
+                    <li class="card">
+                        <img class="card__imagem" src="images/frontend.jpg" alt="Pessoa programando no notebook">
+                        <div class="card__conteudo">
+                            <span class="card__trilha">Front-end</span>
+                            <h3 class="card__titulo">Do layout ao deploy</h3>
+                            <p>Responsividade, componentes e boas práticas para colocar um site no ar.</p>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <img class="card__imagem" src="images/backend.jpg" alt="Pessoa em chamada de vídeo em frente ao computador">
+                        <div class="card__conteudo">
+                            <span class="card__trilha">Back-end</span>
+                            <h3 class="card__titulo">APIs que não caem</h3>
+                            <p>Como organizar rotas, tratar erros e pensar em desempenho desde o começo.</p>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <img class="card__imagem" src="images/data.jpg" alt="Pessoa analisando código em vários monitores">
+                        <div class="card__conteudo">
+                            <span class="card__trilha">Dados</span>
+                            <h3 class="card__titulo">Decisões com dados</h3>
+                            <p>Do dado bruto ao gráfico: limpeza, análise e como contar uma boa história.</p>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <img class="card__imagem" src="images/ui-ux.jpg" alt="Ilustração de um aplicativo de compras no celular">
+                        <div class="card__conteudo">
+                            <span class="card__trilha">UI/UX</span>
+                            <h3 class="card__titulo">Interfaces que convertem</h3>
+                            <p>Pesquisa com usuários, protótipos e testes para criar produtos fáceis de usar.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="programacao" class="programacao">
+            <div class="container">
+                <h2 class="title">Programação · 01/10</h2>
+                <ol class="agenda">
+                    <li class="agenda__item"><time>09:00</time><span>Abertura e boas-vindas</span></li>
+                    <li class="agenda__item"><time>09:30</time><span>Front-end: do layout ao deploy</span></li>
+                    <li class="agenda__item"><time>11:00</time><span>Back-end: APIs que não caem</span></li>
+                    <li class="agenda__item"><time>12:30</time><span>Intervalo</span></li>
+                    <li class="agenda__item"><time>14:00</time><span>Dados: decisões com dados</span></li>
+                    <li class="agenda__item"><time>15:30</time><span>UI/UX: interfaces que convertem</span></li>
+                    <li class="agenda__item agenda__item--destaque"><time>17:00</time><span>Encerramento com bolo virtual 🎂</span></li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="inscricao" class="inscricao">
+            <div class="container inscricao__content">
+                <div>
+                    <h2 class="title">Garanta sua vaga</h2>
+                    <p>O evento é gratuito. Faça sua inscrição para receber o link da transmissão no dia.</p>
+                </div>
+                <form class="form" id="form-inscricao">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" required>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" required>
+                    <label for="trilha">Trilha de interesse</label>
+                    <select id="trilha">
+                        <option>Front-end</option>
+                        <option>Back-end</option>
+                        <option>Dados</option>
+                        <option>UI/UX</option>
+                    </select>
+                    <button type="submit" class="button">Confirmar inscrição</button>
+                    <p class="form__mensagem" id="mensagem" hidden>Inscrição confirmada! Até dia 01 de outubro.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Tech Talks · 01 de outubro · Exercício do módulo 22 da EBAC.</p>
+            <p>Imagens: material de apoio do curso EBAC.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
